@@ -153,6 +153,66 @@ exports.updateMembership = (req, res) => {
   );
 };
 
+
+
+// Create check-in entry
+exports.checkin = (req, res) => {
+  // Validate Request
+  if (!req.query.intime) {
+    res.status(400).send({
+      message: "Check-in can not be empty!"
+    });
+  }
+
+  User.checkin(
+    req.params.id,
+    req.query.intime,
+    (err, data) => {
+      if (err) {
+        if (err.kind === "not_found") {
+          res.status(404).send({
+            message: `Not found User with id ${req.params.id}.`
+          });
+        } else {
+          res.status(500).send({
+            message: "Error updating User checkin with id " + req.params.id
+          });
+        }
+      } else res.send(data);
+    }
+  );
+};
+
+// Update check-in entry with check-out time
+exports.checkout = (req, res) => {
+  // Validate Request
+  if (!req.query.outtime) {
+    res.status(400).send({
+      message: "Check-in can not be empty!"
+    });
+  }
+
+  User.checkout(
+    req.params.id,
+    req.query.outtime,
+    (err, data) => {
+      if (err) {
+        if (err.kind === "not_found") {
+          res.status(404).send({
+            message: `Not found User Active Session with id ${req.params.id}.`
+          });
+        } else {
+          res.status(500).send({
+            message: "Error updating User checkout with id " + req.params.id
+          });
+        }
+      } else res.send(data);
+    }
+  );
+};
+
+
+
 // Delete a user with the specified id in the request
 exports.delete = (req, res) => {
   User.remove(req.params.id, (err, data) => {

@@ -8,7 +8,7 @@ module.exports = app => {
 
   var router = require("express").Router();
 
-  // Create a new users
+  // Create a new user
   router.post("/user/create", users.create);
 
   // Login user
@@ -28,6 +28,13 @@ module.exports = app => {
 
   // Delete a user with id
   router.delete("/user/:id", users.delete);
+
+  // Check-in user -  query params: intime
+  router.put("/users/checkin/:id", users.checkin);
+
+
+  // Check-out  -  query params: outtime
+  router.put("/users/checkout/:id", users.checkout);
 
 
 

@@ -127,6 +127,54 @@ User.updateMembership = (id, membership, result) => {
   );
 };
 
+User.checkin = (id, intime, result) => {
+  sql.query(
+    "INSERT INTO user_log (user_id, in_time, is_active) values (?,?,?)",
+    [id, intime, true],
+    (err, res) => {
+      if (err) {
+        console.log("error: ", err);
+        result(null, err);
+        return;
+      }
+
+      if (res.affectedRows == 0) {
+        // not found user with the id
+        result({ kind: "not_found" }, null);
+        return;
+      }
+
+      console.log("created checkin for user: " + id);
+      result(null, { kind: "ok" });
+    }
+  );
+};
+
+User.checkout = (id, outtime, result) => {
+  sql.query(
+    "UPDATE user_log SET out_time=?, is_active =? WHERE is_active=? AND user_id=?",
+    [outtime, false, true, id],
+    (err, res) => {
+      if (err) {
+        console.log("error: ", err);
+        result(null, err);
+        return;
+      }
+
+      if (res.affectedRows == 0) {
+        // not found user with the id
+        result({ kind: "not_found" }, null);
+        return;
+      }
+
+      console.log("updated checkout for user: " + id);
+      result(null, { kind: "ok" });
+    }
+  );
+};
+
+
+
 User.remove = (id, result) => {
   sql.query("DELETE FROM users WHERE id = ?", id, (err, res) => {
     if (err) {
