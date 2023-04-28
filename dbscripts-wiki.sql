@@ -12,6 +12,14 @@ CREATE TABLE users
 	PRIMARY KEY (id) 
 );
 
+CREATE TABLE user_log
+(
+	user_id int,
+	in_time varchar(255),
+	out_time varchar(255),
+	is_active bool
+);
+
 
 CREATE TABLE memberships
 (
