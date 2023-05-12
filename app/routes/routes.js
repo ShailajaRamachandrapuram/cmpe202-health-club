@@ -61,6 +61,9 @@ module.exports = app => {
   // Create a new memberships
   router.post("/membership/add", memberships.create);
 
+  // Retrieve all memberships -  query params: city
+  router.get("/locations", memberships.getAllLocations);
+
   // Retrieve all memberships -  query params: name
   router.get("/memberships", memberships.findAll);
 
@@ -97,7 +100,7 @@ module.exports = app => {
   // Create a new user schedule
   router.post("/user/schedule/add", userSchedules.create);
 
-  // Retrieve user's all schedules
+  // Retrieve user's all schedules query params: a_date (optional)
   router.get("/user/schedules/:user_id", userSchedules.findAll);
 
   // Retrieve a single user schedule with id
@@ -111,10 +114,10 @@ module.exports = app => {
 
 
 
-  // Create a new use activities
+  // Create a new user activity
   router.post("/user/activity/add", userActivities.create);
 
-  // Retrieve user's all activities
+  // Retrieve user's all activities query params: a_date (optional)
   router.get("/user/activities/:user_id", userActivities.findAll);
 
   // Retrieve a single activity with id

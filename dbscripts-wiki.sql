@@ -20,6 +20,13 @@ CREATE TABLE user_log
 	is_active bool
 );
 
+CREATE TABLE club_loc
+(
+	id int NOT NULL AUTO_INCREMENT,
+	city varchar(255),
+	state varchar(255)
+);
+
 
 CREATE TABLE memberships
 (
@@ -27,7 +34,7 @@ CREATE TABLE memberships
 	name varchar(255),
 	duration varchar(255),
 	cost varchar(255),
-	location varchar(255),
+	location int,
 	PRIMARY KEY (id) 
 );
 

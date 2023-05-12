@@ -1,4 +1,5 @@
 const Membership = require("../models/membershipModel.js");
+const Location = require("../models/locationModel.js");
 
 // Create and Save a Membership
 exports.create = (req, res) => {
@@ -38,6 +39,20 @@ exports.findAll = (req, res) => {
       res.status(500).send({
         message:
           err.message || "Some error occurred while retrieving Memberships."
+      });
+    else res.send(data);
+  });
+};
+
+// Retrieve all Locations from the database (with condition - city).
+exports.getAllLocations = (req, res) => {
+  const name = req.query.city;
+
+  Location.getAll(name, (err, data) => {
+    if (err)
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving locations."
       });
     else res.send(data);
   });

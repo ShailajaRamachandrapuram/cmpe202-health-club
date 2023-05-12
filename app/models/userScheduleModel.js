@@ -54,6 +54,21 @@ UserSchedule.getAll = (user_id, result) => {
   });
 };
 
+UserSchedule.getAllByDate = (user_id, schedule_date, result) => {
+  sql.query("SELECT * FROM user_schedules where user_id = ? AND schedule_id IN (SELECT id from schedules WHERE s_date=?)", 
+    [user_id, schedule_date],
+    (err, res) => {
+    if (err) {
+      console.log("error: ", err);
+      result(null, err);
+      return;
+    }
+
+    console.log("user_schedules: ", res);
+    result(null, res);
+  });
+};
+
 
 UserSchedule.updateById = (id, userSchedule, result) => {
   sql.query(

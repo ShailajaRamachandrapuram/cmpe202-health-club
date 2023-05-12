@@ -30,11 +30,23 @@ exports.create = (req, res) => {
 // Retrieve all user's all schedules from the database (with condition).
 exports.findAll = (req, res) => {
   const user_id = req.params.id;
+  const schedule_date = req.query.a_date;
 
   // Validate request
   if (!user_id) {
     res.status(400).send({
       message: "User ID is missing in request!"
+    });
+  }
+
+  if(schedule_date){
+    UserSchedule.getAllByDate(user_id, schedule_date, (err, data) => {
+    if (err)
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving UserSchedule."
+      });
+    else res.send(data);
     });
   }
 

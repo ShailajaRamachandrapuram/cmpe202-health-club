@@ -56,6 +56,21 @@ UserActivity.getAll = (user_id, result) => {
   });
 };
 
+UserActivity.getAllByDate = (user_id, activity_date, result) => {
+  sql.query("SELECT * FROM user_activities where user_id = ? AND activity_date= ?", 
+    [user_id, activity_date],
+    (err, res) => {
+    if (err) {
+      console.log("error: ", err);
+      result(null, err);
+      return;
+    }
+
+    console.log("user_activities: ", res);
+    result(null, res);
+  });
+};
+
 
 UserActivity.updateById = (id, userActivity, result) => {
   sql.query(
