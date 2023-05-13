@@ -50,6 +50,15 @@ AWSDeployment:
 
 <img width="1109" alt="database" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/7b3f413d-003c-47a5-9442-a676128db79d">
 
+
+Screenshots:
+
+
+<img width="1334" alt="home page" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/eb005616-30dd-44e4-9b20-6b63ddf64fe0">
+
+
+<img width="1494" alt="classes" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/6796d51c-d243-44a2-8e4e-8c187a19066d">
+
 ## Backend setup
 ```
 npm install
