@@ -7,6 +7,10 @@ Shailaja Ramachandrapuram
 
 San jose state university
 
+Problem Statement: 
+
+implement an end2end HealthClub Membership Management system for your favorite Health club/Gym
+
 
 Technologies
 
