@@ -48,10 +48,10 @@ module.exports = app => {
   // Retrieve a single activity with id
   router.get("/activity/:id", activities.findOne);
 
-  // Update a activities with id
+  // Update an activity with id
   router.put("/activity/:id", activities.update);
 
-  // Delete a user with id
+  // Delete an activity with id
   router.delete("/activity/:id", activities.delete);
 
 
@@ -67,13 +67,13 @@ module.exports = app => {
   // Retrieve all memberships -  query params: name
   router.get("/memberships", memberships.findAll);
 
-  // Retrieve a single user with id
+  // Retrieve a single membership with id
   router.get("/membership/:id", memberships.findOne);
 
-  // Update a user with id
+  // Update a membership with id
   router.put("/membership/:id", memberships.update);
 
-  // Delete a user with id
+  // Delete a membership with id
   router.delete("/membership/:id", memberships.delete);
 
 
@@ -85,13 +85,13 @@ module.exports = app => {
   // Retrieve all schedules  -  query params: name
   router.get("/schedules", schedules.findAll);
 
-  // Retrieve a single user with id
+  // Retrieve a single schedule with id
   router.get("/schedule/:id", schedules.findOne);
 
-  // Update a user with id
+  // Update a schedule with id
   router.put("/schedule/:id", schedules.update);
 
-  // Delete a user with id
+  // Delete a schedule with id
   router.delete("/schedule/:id", schedules.delete);
 
 
@@ -106,10 +106,10 @@ module.exports = app => {
   // Retrieve a single user schedule with id
   router.get("/user/schedule/:id", userSchedules.findOne);
 
-  // Update a user with id
+  // Update a user schedule with id
   router.put("/user/schedule/:id", userSchedules.update);
 
-  // Delete a user with id
+  // Delete a user schedule with id
   router.delete("/user/schedule/:id", userSchedules.delete);
 
 
@@ -123,10 +123,10 @@ module.exports = app => {
   // Retrieve a single activity with id
   router.get("/user/activity/:id", userActivities.findOne);
 
-  // Update an activity with id
+  // Update a user activity with id
   router.put("/user/activity/:id", userActivities.update);
 
-  // Delete an activity with id
+  // Delete a user activity with id
   router.delete("/user/activity/:id", userActivities.delete);
 
 
