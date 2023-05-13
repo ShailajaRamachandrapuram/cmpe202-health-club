@@ -18,7 +18,8 @@ Technologies
   
 Usecase diagram:
 
-<img width="746" alt="Usecase diagram" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-   club/assets/111623287/4dae9367-0e49-4928-aee3-88652825a650">
+<img width="746" alt="Usecase diagram" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/c188b7e1-ffd0-41d6-974a-40132cd705a9">
+
 
 Architecture level:
 
