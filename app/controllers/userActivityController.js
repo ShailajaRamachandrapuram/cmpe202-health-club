@@ -31,7 +31,7 @@ exports.create = (req, res) => {
 
 // Retrieve all user's all activities from the database (with condition).
 exports.findAll = (req, res) => {
-  const user_id = req.params.id;
+  const user_id = req.params.user_id;
   const activity_date = req.query.a_date;
 
   // Validate request
@@ -39,6 +39,7 @@ exports.findAll = (req, res) => {
     res.status(400).send({
       message: "User ID is missing in request!"
     });
+    return;
   }
 
   if(activity_date){
@@ -50,6 +51,7 @@ exports.findAll = (req, res) => {
       });
     else res.send(data);
     });
+    return;
   }
 
   UserActivity.getAll(user_id, (err, data) => {
@@ -59,6 +61,7 @@ exports.findAll = (req, res) => {
           err.message || "Some error occurred while retrieving UserActivity."
       });
     else res.send(data);
+    return;
   });
 };
 

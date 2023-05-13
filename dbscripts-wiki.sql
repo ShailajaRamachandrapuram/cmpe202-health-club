@@ -24,7 +24,8 @@ CREATE TABLE club_loc
 (
 	id int NOT NULL AUTO_INCREMENT,
 	city varchar(255),
-	state varchar(255)
+	state varchar(255),
+	PRIMARY KEY (id)
 );
 
 

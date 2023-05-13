@@ -22,7 +22,7 @@ Schedule.create = (newSchedule, result) => {
 };
 
 Schedule.findById = (id, result) => {
-  sql.query(`SELECT * FROM schedules WHERE id = ${id}`, (err, res) => {
+  sql.query(`SELECT * FROM schedules WHERE id = "${id}"`, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);
@@ -41,14 +41,25 @@ Schedule.findById = (id, result) => {
 };
 
 
-Schedule.getAll = (title, result) => {
+Schedule.getAll = (result) => {
   let query = "SELECT * FROM schedules";
 
-  if (title) {
-    query += ` WHERE name LIKE '%${title}%'`;
-  }
-
   sql.query(query, (err, res) => {
+    if (err) {
+      console.log("error: ", err);
+      result(null, err);
+      return;
+    }
+
+    console.log("schedules: ", res);
+    result(null, res);
+  });
+};
+
+Schedule.getAllByDate = (a_date, result) => {
+  let query = "SELECT * FROM schedules WHERE s_date = ?";
+
+  sql.query(query, a_date, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(null, err);

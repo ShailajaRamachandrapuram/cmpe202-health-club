@@ -43,7 +43,7 @@ User.findById = (id, result) => {
 };
 
 User.login = (user, result) => {
-  sql.query(`SELECT * FROM users WHERE name = ${user.name} AND password = ${user.password}` , (err, res) => {
+  sql.query(`SELECT * FROM users WHERE name = "${user.name}" AND password = "${user.password}"` , (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);

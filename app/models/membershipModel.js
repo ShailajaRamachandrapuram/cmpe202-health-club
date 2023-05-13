@@ -22,7 +22,7 @@ Membership.create = (newMembership, result) => {
 };
 
 Membership.findById = (id, result) => {
-  sql.query(`SELECT * FROM memberships WHERE id = ${id}`, (err, res) => {
+  sql.query(`SELECT * FROM memberships WHERE id = "${id}"`, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);
@@ -45,7 +45,7 @@ Membership.getAll = (title, result) => {
   let query = "SELECT * FROM memberships";
 
   if (title) {
-    query += ` WHERE name LIKE '%${title}%'`;
+    query += ` WHERE location = "${title}"`;
   }
 
   sql.query(query, (err, res) => {

@@ -19,7 +19,7 @@ Activity.create = (newActivity, result) => {
 };
 
 Activity.findById = (id, result) => {
-  sql.query(`SELECT * FROM activities WHERE id = ${id}`, (err, res) => {
+  sql.query(`SELECT * FROM activities WHERE id = "${id}"`, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);

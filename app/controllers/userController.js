@@ -104,8 +104,6 @@ exports.update = (req, res) => {
     });
   }
 
-  console.log(req.body);
-
   User.updateById(
     req.params.id,
     new User(req.body),

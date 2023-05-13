@@ -68,8 +68,6 @@ exports.update = (req, res) => {
     });
   }
 
-  console.log(req.body);
-
   Activity.updateById(
     req.params.id,
     new Activity(req.body),

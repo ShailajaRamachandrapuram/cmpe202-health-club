@@ -64,7 +64,7 @@ module.exports = app => {
   // Retrieve all memberships -  query params: city
   router.get("/locations", memberships.getAllLocations);
 
-  // Retrieve all memberships -  query params: name
+  // Retrieve all memberships -  query params: loc_id
   router.get("/memberships", memberships.findAll);
 
   // Retrieve a single membership with id
@@ -82,7 +82,7 @@ module.exports = app => {
   // Create a new schedules
   router.post("/schedule/add", schedules.create);
 
-  // Retrieve all schedules  -  query params: name
+  // Retrieve all schedules  -  query params: a_date
   router.get("/schedules", schedules.findAll);
 
   // Retrieve a single schedule with id

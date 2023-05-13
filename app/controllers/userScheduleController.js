@@ -29,7 +29,7 @@ exports.create = (req, res) => {
 
 // Retrieve all user's all schedules from the database (with condition).
 exports.findAll = (req, res) => {
-  const user_id = req.params.id;
+  const user_id = req.params.user_id;
   const schedule_date = req.query.a_date;
 
   // Validate request
@@ -37,6 +37,7 @@ exports.findAll = (req, res) => {
     res.status(400).send({
       message: "User ID is missing in request!"
     });
+    return;
   }
 
   if(schedule_date){
@@ -48,6 +49,7 @@ exports.findAll = (req, res) => {
       });
     else res.send(data);
     });
+    return;
   }
 
   UserSchedule.getAll(user_id, (err, data) => {
@@ -87,8 +89,6 @@ exports.update = (req, res) => {
       message: "Content can not be empty!"
     });
   }
-
-  console.log(req.body);
 
   UserSchedule.updateById(
     req.params.id,

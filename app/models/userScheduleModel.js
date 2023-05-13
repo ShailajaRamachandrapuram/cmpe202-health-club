@@ -3,7 +3,7 @@ const sql = require("./db.js");
 // constructor
 const UserSchedule = function(userSchedule) {
   this.user_id = userSchedule.user_id;
-  this.schedule_id = userSchedule.activity_id;
+  this.schedule_id = userSchedule.schedule_id;
 };
 
 UserSchedule.create = (newUserSchedule, result) => {

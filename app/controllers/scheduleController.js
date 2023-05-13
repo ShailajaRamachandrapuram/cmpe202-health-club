@@ -31,9 +31,9 @@ exports.create = (req, res) => {
 
 // Retrieve all Schedules from the database (with condition).
 exports.findAll = (req, res) => {
-  const name = req.query.name;
+  const name = req.query.a_date;
 
-  Schedule.getAll(name, (err, data) => {
+  Schedule.getAllByDate(name, (err, data) => {
     if (err)
       res.status(500).send({
         message:
@@ -70,8 +70,6 @@ exports.update = (req, res) => {
       message: "Content can not be empty!"
     });
   }
-
-  console.log(req.body);
 
   Schedule.updateById(
     req.params.id,

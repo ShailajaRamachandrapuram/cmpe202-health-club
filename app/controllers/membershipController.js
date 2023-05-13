@@ -32,9 +32,9 @@ exports.create = (req, res) => {
 
 // Retrieve all Memberships from the database (with condition).
 exports.findAll = (req, res) => {
-  const name = req.query.name;
+  const loc_id = req.query.loc_id;
 
-  Membership.getAll(name, (err, data) => {
+  Membership.getAll(loc_id, (err, data) => {
     if (err)
       res.status(500).send({
         message:
