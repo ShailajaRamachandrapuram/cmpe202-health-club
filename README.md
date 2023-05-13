@@ -10,9 +10,9 @@ San jose state university
 
 Technologies
 
-  Frontend - React js
+  Frontend - Reactjs
 
-  Backend - Express js
+  Backend - Expressjs
 
   Database - Mysql
 
