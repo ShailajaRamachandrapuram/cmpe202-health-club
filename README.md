@@ -15,10 +15,10 @@ Technologies
   Database - Mysql
 
   Deployment - AWS
+  
+Usecase diagram:
 
-  Usecase diagram:
-
-  <img width="746" alt="Usecase diagram" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-   club/assets/111623287/4dae9367-0e49-4928-aee3-88652825a650">
+<img width="746" alt="Usecase diagram" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-   club/assets/111623287/4dae9367-0e49-4928-aee3-88652825a650">
 
 Architecture level:
 
