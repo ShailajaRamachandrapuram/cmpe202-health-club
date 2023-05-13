@@ -53,11 +53,21 @@ AWSDeployment:
 
 Screenshots:
 
+Home page
 
 <img width="1334" alt="home page" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/eb005616-30dd-44e4-9b20-6b63ddf64fe0">
 
 
 <img width="1494" alt="classes" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/6796d51c-d243-44a2-8e4e-8c187a19066d">
+
+<img width="1290" alt="user profile" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/38689391-6dab-49b1-9ecc-f739a5fa2d6a">
+
+
+<img width="689" alt="enroll users" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/e4e2862f-f580-47ad-a2e1-456f57e8f69e">
+
+
+<img width="690" alt="add activities" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/11e0d6d0-d744-4fe8-9a48-922e75e73732">
+
 
 ## Backend setup
 ```
