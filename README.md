@@ -2,36 +2,37 @@
 
 
 ID: 016718702
+
 San jose state university
 
 
 Technologies
 
-Frontend - React js
+  Frontend - React js
 
-Backend - Express js
+  Backend - Express js
 
-Database - Mysql
+  Database - Mysql
 
-Deployment - AWS
+  Deployment - AWS
 
-Usecase diagram:
+  Usecase diagram:
 
-<img width="746" alt="Usecase diagram" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/4dae9367-0e49-4928-aee3-88652825a650">
+  <img width="746" alt="Usecase diagram" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-   club/assets/111623287/4dae9367-0e49-4928-aee3-88652825a650">
 
 Architecture level:
 
-Reactjs as frontend
+   Reactjs as frontend
 
-Expressjs as Backend
+   Expressjs as Backend
 
-Mysql as database
+   Mysql as database
 
-AWS as the cloud providers
+   AWS as the cloud providers
 
 AWSDeployment:
 
-<img width="381" alt="ec2" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/f5d2eba0-8a4d-470b-a2bc-3caec97e4485">
+<img width="381" alt="ec2" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-           club/assets/111623287/f5d2eba0-8a4d-470b-a2bc-3caec97e4485">
 
 
 <img width="1309" alt="aws home page" src="https://github.com/ShailajaRamachandrapuram/cmpe202-health-club/assets/111623287/d45492c9-3263-4b67-8903-41188e492bf6">
